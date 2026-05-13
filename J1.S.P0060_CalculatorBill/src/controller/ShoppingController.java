@@ -12,7 +12,7 @@ import view.ShoppingView;
 
 /**
  *
- * @author Tuan Tran
+ * @author hieupm
  */
 public class ShoppingController {
 
@@ -26,15 +26,16 @@ public class ShoppingController {
     
     public void run() {
         System.out.println("======= Shopping program ==========");
+        
+        //khai báo numberOfBill để lưu giá trị người dùng nhập
         int numberOfBills = view.getNumberOfBills();
-        
         int[] bills = new int[numberOfBills];
-        
+        //vòng lặp for để lặp và lấy bill do người dùng nhập
         for (int i = 0; i < numberOfBills; i++) {
             bills[i] = view.getBillValue(i);
         }
         
-        //
+        //khởi tạo walletAmout 
         int walletAmount = view.getWalletValue();
         
         Wallet wallet = new Wallet(walletAmount);

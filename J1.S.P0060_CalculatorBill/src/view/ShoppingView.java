@@ -21,6 +21,11 @@ public class ShoppingView {
         return scanner.nextLine();
     }
 
+    /**
+     * kiểm tra dữ liệu ng dùng nhập vào trong khoảng từ 1-100 chữ thì sẽ in lỗi
+     *
+     * @return
+     */
     public int getNumberOfBills() {
         while (true) {
             try {
@@ -31,6 +36,7 @@ public class ShoppingView {
             }
         }
     }
+
     //2
     public int getBillValue(int i) {
         while (true) {
