@@ -1,0 +1,25 @@
+Source Packages
+├── controller
+│   └── WorkerController.java
+├── main
+│   └── Main.java
+├── model
+│   ├── Worker.java
+│   ├── SalaryHistory.java
+│   ├── SalaryStatus.java
+│   └── WorkerService.java
+├── utils
+│   └── Validator.java
+└── view
+    └── WorkerView.java
+	
+Luồng chạy chương trình
+Khi chạy Main, chương trình tạo WorkerController.
+
+WorkerController.run() chạy vòng lặp menu. Mỗi lần người dùng chọn chức năng, controller sẽ điều phối:
+
+Chọn 1: controller gọi view.inputWorker() để nhập dữ liệu, sau đó gọi service.addWorker(worker).
+Chọn 2: controller nhập code và amount, sau đó gọi service.changeSalary(SalaryStatus.UP, code, amount).
+Chọn 3: tương tự nhưng truyền SalaryStatus.DOWN.
+Chọn 4: controller gọi service.getInfomationSalary(), sau đó đưa danh sách cho view in ra.
+Chọn 5: thoát chương trình.
